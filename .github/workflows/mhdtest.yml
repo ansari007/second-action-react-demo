@@ -18,7 +18,7 @@ jobs:
     steps:
       # Check out the repository's code.
       - name: get code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       # Set up the Node.js environment with the specified version.
       - name: setup node
@@ -39,7 +39,7 @@ jobs:
     steps:
       # Check out the repository's code.
       - name: get code
-        uses: actions/checkout@4
+        uses: actions/checkout@v4
 
       # Set up the Node.js environment with the specified version.
       - name: setup node
