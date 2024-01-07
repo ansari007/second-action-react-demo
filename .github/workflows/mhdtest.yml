@@ -5,7 +5,7 @@ name: mhdTest
 on:
   push:
     branches:
-      - "main"
+      - "master"
 
 # Define the jobs that make up the workflow. Each job runs in a fresh instance of the virtual environment.
 jobs:
