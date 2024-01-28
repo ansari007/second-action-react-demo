@@ -25,6 +25,11 @@ jobs:
         uses: actions/setup-node@v4.0.1
         with:
           node-version: 20
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       # Install the dependencies for the project.
       - name: Install dependencies
         run: npm install
@@ -50,7 +55,11 @@ jobs:
         uses: actions/setup-node@v4.0.1
         with:
           node-version: 20
-
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: deps-node-modules-${{ hashFiles('**/package-lock.json') }}
       # Install the dependencies for the project.
       - name: Install dependencies
         run: npm install
