@@ -56,7 +56,11 @@ jobs:
       # Build the project.
       - name: build
         run: npm run build
-
+      - name: upload artifacts
+        uses: actions/upload-artifacts@v4
+        with:
+          name: "dist-files"
+          path: "dist"
       # Deploy the project.
       - name: Deploy
         run: echo "deploying"
