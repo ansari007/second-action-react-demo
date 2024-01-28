@@ -24,7 +24,7 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v4.0.1
         with:
-          node-version: 18
+          node-version: 20
       # Install the dependencies for the project.
       - name: Install dependencies
         run: npm install
@@ -47,7 +47,7 @@ jobs:
       - name: setup node
         uses: actions/setup-node@v4.0.1
         with:
-          node-version: 18
+          node-version: 20
 
       # Install the dependencies for the project.
       - name: Install dependencies
@@ -57,7 +57,7 @@ jobs:
       - name: build
         run: npm run build
       - name: upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "dist-files"
           path: "dist"
